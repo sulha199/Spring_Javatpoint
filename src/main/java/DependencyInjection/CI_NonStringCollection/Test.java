@@ -1,4 +1,4 @@
-package CI_NonStringCollection;
+package DependencyInjection.CI_NonStringCollection;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;

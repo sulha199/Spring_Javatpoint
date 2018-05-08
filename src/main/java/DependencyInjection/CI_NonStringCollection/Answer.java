@@ -1,4 +1,4 @@
-package CI_NonStringCollection;
+package DependencyInjection.CI_NonStringCollection;
 
 public class Answer {
     private int id;

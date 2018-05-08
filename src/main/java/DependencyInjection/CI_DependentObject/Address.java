@@ -1,4 +1,4 @@
-package CI_DependentObject;
+package DependencyInjection.CI_DependentObject;
 
 public class Address {
     private String city;

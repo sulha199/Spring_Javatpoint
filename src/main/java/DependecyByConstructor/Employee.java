@@ -1,8 +1,8 @@
 package DependecyByConstructor;
 
 public class Employee {
-    private int id;
-    private String name;
+    protected int id;
+    protected String name;
 
     public Employee() {System.out.println("def cons");}
 

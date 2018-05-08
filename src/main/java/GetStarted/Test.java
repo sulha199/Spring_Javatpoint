@@ -1,10 +1,10 @@
-package com.javatpoint;
+package GetStarted;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import com.javatpoint.Student;
+import GetStarted.Student;
 
 
 public class Test {

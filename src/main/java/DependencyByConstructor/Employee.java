@@ -1,4 +1,4 @@
-package DependecyByConstructor;
+package DependencyByConstructor;
 
 public class Employee {
     protected int id;

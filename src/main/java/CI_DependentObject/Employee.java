@@ -1,7 +1,7 @@
-package DependcyWithDependentObject;
+package CI_DependentObject;
 
 
-public class Employee extends DependecyByConstructor.Employee{
+public class Employee extends DependencyByConstructor.Employee {
     Address address;
     public Employee() {System.out.println("def cons");}
 

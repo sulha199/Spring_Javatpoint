@@ -1,4 +1,4 @@
-package DependcyWithDependentObject;
+package CI_DependentObject;
 
 public class Address {
     private String city;

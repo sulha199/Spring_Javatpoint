@@ -1,4 +1,4 @@
-package com.javatpoint;
+package GetStarted;
 
 public class Student {
     private String name;

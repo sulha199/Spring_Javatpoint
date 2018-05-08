@@ -6,21 +6,30 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="studentbean" class="com.javatpoint.Student">
+    <!--
+    Get Started
+    -->
+    <bean id="studentbean" class="GetStarted.Student">
         <property name="name" value="Vimal Jaiswal"></property>
     </bean>
 
-    <bean id="e" class="DependecyByConstructor.Employee">
+    <!--
+    Dependency by constructor
+    -->
+    <bean id="e" class="DependencyInjection.DependencyByConstructor.Employee">
         <constructor-arg value="10" type="int"></constructor-arg>
         <constructor-arg value="soonoo"></constructor-arg>
     </bean>
 
-    <bean id="a1" class="DependcyWithDependentObject.Address">
+    <!--
+    CI with dependent object
+    -->
+    <bean id="a1" class="DependencyInjection.CI_DependentObject.Address">
         <constructor-arg value="ghaziabad"></constructor-arg>
         <constructor-arg value="UP"></constructor-arg>
         <constructor-arg value="India"></constructor-arg>
     </bean>
-    <bean id="e1" class="DependcyWithDependentObject.Employee">
+    <bean id="e1" class="DependencyInjection.CI_DependentObject.Employee">
         <constructor-arg value="12" type="int"></constructor-arg>
         <constructor-arg value="Sonoo"></constructor-arg>
         <constructor-arg>
@@ -28,4 +37,81 @@
         </constructor-arg>
     </bean>
 
+    <!--
+    CI with String Collection
+    -->
+    <bean id="q" class="DependencyInjection.CI_StringCollection.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is java?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Java is a programming language</value>
+                <value>Java is a Platform</value>
+                <value>Java is an Island of Indonasia</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--
+    CI with Non String Collection
+    -->
+    <bean id="ans1" class="DependencyInjection.CI_NonStringCollection.Answer">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Java is a programming language"></constructor-arg>
+        <constructor-arg value="John"></constructor-arg>
+    </bean>
+
+    <bean id="ans2" class="DependencyInjection.CI_NonStringCollection.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is a Platform"></constructor-arg>
+        <constructor-arg value="Ravi"></constructor-arg>
+    </bean>
+
+    <bean id="q1" class="DependencyInjection.CI_NonStringCollection.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is java?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="ans1"/>
+                <ref bean="ans2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--
+    CI Inheriting Bean
+    -->
+    <bean id="ei1" class="DependencyInjection.CI_DependentObject.Employee">
+        <constructor-arg value="101"></constructor-arg>
+        <constructor-arg  value="Sachin"></constructor-arg>
+    </bean>
+    <bean id="address1" class="DependencyInjection.CI_DependentObject.Address">
+        <constructor-arg value="21,Lohianagar"></constructor-arg>
+        <constructor-arg value="UP"></constructor-arg>
+        <constructor-arg value="USA"></constructor-arg>
+    </bean>
+    <bean id="ei" class="DependencyInjection.CI_DependentObject.Employee" parent="ei1">
+        <constructor-arg ref="address1"></constructor-arg>
+    </bean>
+
+
+    <!--
+    Setter Injection
+    -->
+    <bean id="obj" class="DependencyInjection.SI_SetterInjection.Employee">
+        <property name="id">
+            <value>20</value>
+        </property>
+        <property name="name">
+            <value>Arun</value>
+        </property>
+        <property name="city">
+            <value>ghaziabad</value>
+        </property>
+    </bean>
+
+
+    <bean id="b" class="DependencyInjection.AutoWire.B"></bean>
+    <bean id="a_name" class="DependencyInjection.AutoWire.A" autowire="byName"></bean>
+    <bean id="a_type" class="DependencyInjection.AutoWire.A" autowire="byType"></bean>
 </beans>

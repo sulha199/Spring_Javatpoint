@@ -10,4 +10,9 @@
         <property name="name" value="Vimal Jaiswal"></property>
     </bean>
 
+    <bean id="e" class="DependecyByConstructor.Employee">
+        <constructor-arg value="10" type="int"></constructor-arg>
+        <constructor-arg value="soonoo"></constructor-arg>
+    </bean>
+
 </beans>

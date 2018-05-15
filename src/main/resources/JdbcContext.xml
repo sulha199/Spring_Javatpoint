@@ -26,4 +26,7 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
 
+    <bean id="rm_edao" class="SpringJdbc.RowMapper.EmployeeDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+    </bean>
 </beans>

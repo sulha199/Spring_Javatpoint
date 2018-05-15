@@ -29,4 +29,14 @@
     <bean id="rm_edao" class="SpringJdbc.RowMapper.EmployeeDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
+
+    <bean id="jtemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="ds"></constructor-arg>
+    </bean>
+
+    <bean id="n_edao" class="SpringJdbc.NamedParameter.EmpDao">
+        <constructor-arg>
+            <ref bean="jtemplate"/>
+        </constructor-arg>
+    </bean>
 </beans>

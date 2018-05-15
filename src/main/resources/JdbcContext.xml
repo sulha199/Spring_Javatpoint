@@ -22,4 +22,8 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
 
+    <bean id="r_edao" class="SpringJdbc.ResultSetExtractor.EmployeeDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+    </bean>
+
 </beans>

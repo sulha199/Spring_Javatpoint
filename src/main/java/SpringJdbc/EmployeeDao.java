@@ -3,7 +3,7 @@ package SpringJdbc;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class EmployeeDao {
-    private JdbcTemplate jdbcTemplate;
+    protected JdbcTemplate jdbcTemplate;
 
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;

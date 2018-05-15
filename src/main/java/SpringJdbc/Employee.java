@@ -8,6 +8,9 @@ public class Employee {
 //getters and setters
 
 
+    public Employee() {
+    }
+
     public Employee(int id, String name, float salary) {
         this.id = id;
         this.name = name;
@@ -17,6 +20,10 @@ public class Employee {
     public Employee(String name, float salary) {
         this.name = name;
         this.salary = salary;
+    }
+
+    public String toString(){
+        return id+" "+name+" "+salary;
     }
 
     public int getId() {

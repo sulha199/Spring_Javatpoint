@@ -18,4 +18,8 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
 
+    <bean id="p_edao" class="SpringJdbc.PreparedStatement.EmployeeDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+    </bean>
+
 </beans>

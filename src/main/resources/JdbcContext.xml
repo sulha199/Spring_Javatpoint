@@ -30,6 +30,12 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
 
+    <bean id="s_edao" class="SpringJdbc.SimpleJdbcTemplate.EmpDao">
+        <constructor-arg>
+            <ref bean="jdbcTemplate"/>
+        </constructor-arg>
+    </bean>
+
     <bean id="jtemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
         <constructor-arg ref="ds"></constructor-arg>
     </bean>

@@ -51,6 +51,20 @@
             <version>5.1.44</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!-- Hibernate Dependencies -->
+        <!-- Hibernate core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
     </dependencies>
 
 
